@@ -1,0 +1,25 @@
+<%= form_for(@mast) do |f| %>
+  <% if @mast.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mast.errors.count, "error") %> prohibited this mast from being saved:</h2>
+
+      <ul>
+      <% @mast.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label : %><br>
+    <%= f.text_field : %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

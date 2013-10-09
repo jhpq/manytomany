@@ -1,0 +1,29 @@
+<h1>Listing masts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @masts.each do |mast| %>
+      <tr>
+        <td><%= mast.name %></td>
+        <td><%= mast. %></td>
+        <td><%= link_to 'Show', mast %></td>
+        <td><%= link_to 'Edit', edit_mast_path(mast) %></td>
+        <td><%= link_to 'Destroy', mast, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mast', new_mast_path %>
